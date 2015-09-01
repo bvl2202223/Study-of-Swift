@@ -10,4 +10,5 @@ import Foundation
 
 println("Hello, World!")
 println("test")
+println("もう一回")
 
