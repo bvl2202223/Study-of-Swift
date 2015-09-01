@@ -8,7 +8,7 @@
 
 import Foundation
 
-println("Hello, World!")
+println("Hello, Swift")
 println("test")
 println("もう一回")
 
