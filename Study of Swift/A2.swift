@@ -1,5 +1,5 @@
 //
-//  main.swift
+//  A2.swift
 //  Study of Swift
 //
 //  Created by takahiro baba on 2015/09/01.
@@ -8,11 +8,10 @@
 
 import Foundation
 
-println("Hello, Swift")
-println("test")
-println("もう一回")
+class A2 : A {
 
-let a = A(string: "A")
+}
 
-println(a.string)
-
+class A2b : A2 {
+    
+}
