@@ -16,3 +16,8 @@ let a = A(string: "A")
 
 println(a.string)
 
+let range = Array(0...21)
+
+let array1 = range.map(fizzbuzz)
+
+println(array1)
