@@ -18,6 +18,19 @@ println(a.string)
 
 let range = Array(0...21)
 
-let array1 = range.map(fizzbuzz)
+let fizzbuzzArray = range.map(fizzbuzz)
 
-println(array1)
+println(range)
+println(fizzbuzzArray)
+
+let fizzbuzzArraya = range.map(fizzbuzz2a)
+println("fizzbuzzArray == fizzbuzzArraya \(fizzbuzzArray == fizzbuzzArraya)")
+
+let fizzbuzzArrayb = range.map(fizzbuzz2b)
+println("fizzbuzzArray == fizzbuzzArrayb \(fizzbuzzArray == fizzbuzzArrayb)")
+
+let fizzbuzzArrayc = range.map(fizzbuzz2c)
+println("fizzbuzzArray == fizzbuzzArrayc \(fizzbuzzArray == fizzbuzzArrayc)")
+
+let fizzbuzzArrayd = range.map(fizzbuzz2d)
+println("fizzbuzzArray == fizzbuzzArrayd \(fizzbuzzArray == fizzbuzzArrayd)")
