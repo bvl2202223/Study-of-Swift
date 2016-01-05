@@ -11,6 +11,7 @@
 		8FF6B5F41B95D16700D690A0 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF6B5F31B95D16700D690A0 /* A.swift */; };
 		8FF6B5F61B95D1FF00D690A0 /* A2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF6B5F51B95D1FF00D690A0 /* A2.swift */; };
 		EE1871661B96B5C800C2CDA0 /* fizzbuzz.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1871651B96B5C800C2CDA0 /* fizzbuzz.swift */; };
+		EEA52C561C3C0B42001B3D8C /* flatWrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA52C551C3C0B42001B3D8C /* flatWrap.swift */; };
 		EEDE8F821B986FB1008CAA98 /* fizzbuzz2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDE8F811B986FB1008CAA98 /* fizzbuzz2.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		8FF6B5F31B95D16700D690A0 /* A.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
 		8FF6B5F51B95D1FF00D690A0 /* A2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A2.swift; sourceTree = "<group>"; };
 		EE1871651B96B5C800C2CDA0 /* fizzbuzz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fizzbuzz.swift; sourceTree = "<group>"; };
+		EEA52C551C3C0B42001B3D8C /* flatWrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = flatWrap.swift; sourceTree = "<group>"; };
 		EEDE8F811B986FB1008CAA98 /* fizzbuzz2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fizzbuzz2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				8FF6B5EC1B95B11800D690A0 /* main.swift */,
+				EEA52C551C3C0B42001B3D8C /* flatWrap.swift */,
 				EE1871651B96B5C800C2CDA0 /* fizzbuzz.swift */,
 				EEDE8F811B986FB1008CAA98 /* fizzbuzz2.swift */,
 				8FF6B5F31B95D16700D690A0 /* A.swift */,
@@ -100,7 +103,9 @@
 		8FF6B5E11B95B11800D690A0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = bvl;
 				TargetAttributes = {
 					8FF6B5E81B95B11800D690A0 = {
@@ -133,6 +138,7 @@
 				8FF6B5ED1B95B11800D690A0 /* main.swift in Sources */,
 				8FF6B5F41B95D16700D690A0 /* A.swift in Sources */,
 				8FF6B5F61B95D1FF00D690A0 /* A2.swift in Sources */,
+				EEA52C561C3C0B42001B3D8C /* flatWrap.swift in Sources */,
 				EE1871661B96B5C800C2CDA0 /* fizzbuzz.swift in Sources */,
 				EEDE8F821B986FB1008CAA98 /* fizzbuzz2.swift in Sources */,
 			);
@@ -161,6 +167,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;

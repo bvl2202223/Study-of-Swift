@@ -8,29 +8,44 @@
 
 import Foundation
 
-println("Hello, Swift!")
-println("test")
-println("もう一回")
+print("Hello, Swift!")
+print("test")
+print("もう一回")
 
 let a = A(string: "A")
 
-println(a.string)
+print(a.string)
 
 let range = Array(0...21)
 
 let fizzbuzzArray = range.map(fizzbuzz)
 
-println(range)
-println(fizzbuzzArray)
+print(range)
+print(fizzbuzzArray)
 
 let fizzbuzzArraya = range.map(fizzbuzz2a)
-println("fizzbuzzArray == fizzbuzzArraya \(fizzbuzzArray == fizzbuzzArraya)")
+print("fizzbuzzArray == fizzbuzzArraya \(fizzbuzzArray == fizzbuzzArraya)")
 
 let fizzbuzzArrayb = range.map(fizzbuzz2b)
-println("fizzbuzzArray == fizzbuzzArrayb \(fizzbuzzArray == fizzbuzzArrayb)")
+print("fizzbuzzArray == fizzbuzzArrayb \(fizzbuzzArray == fizzbuzzArrayb)")
 
 let fizzbuzzArrayc = range.map(fizzbuzz2c)
-println("fizzbuzzArray == fizzbuzzArrayc \(fizzbuzzArray == fizzbuzzArrayc)")
+print("fizzbuzzArray == fizzbuzzArrayc \(fizzbuzzArray == fizzbuzzArrayc)")
 
 let fizzbuzzArrayd = range.map(fizzbuzz2d)
-println("fizzbuzzArray == fizzbuzzArrayd \(fizzbuzzArray == fizzbuzzArrayd)")
+print("fizzbuzzArray == fizzbuzzArrayd \(fizzbuzzArray == fizzbuzzArrayd)")
+
+//mark Flat unwrap
+
+let optionalString:String? = "Optional string"
+let any:Any = optionalString
+
+//let string = any as! Optional<String>
+//
+//if let string = any {
+//    print("\(string)")
+//}
+
+if let string = flatWrap(any) as? String {
+    print("\(string)")
+}

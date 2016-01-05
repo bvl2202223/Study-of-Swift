@@ -10,14 +10,13 @@ import Foundation
 
 func fizzbuzz2a(x:Int) -> String{
     let strX = String(x)
-    let arrayX = Array(strX)
     
     let fizz:() -> String = {
-        let strCount = count(strX)
+        let strCount = strX.characters.count
         var sum = 0
         var a = x;
         
-        for i in 1..<strCount {
+        (1..<strCount).forEach { _ in
             let m = a % 10
             sum += m
             
@@ -27,7 +26,7 @@ func fizzbuzz2a(x:Int) -> String{
         sum += a
         
         let array = (0...3 * strCount).map{$0*3}
-        if contains(array, sum) {
+        if array.contains(sum) {
             return "fizz"
         }else{
             return ""
@@ -53,9 +52,10 @@ func fizzbuzz2a(x:Int) -> String{
 
 func fizzbuzz2b(x:Int) -> String{
     let stringX = String(x)
-    let arrayX = Array(stringX)
-    let fizz =  contains((0...(arrayX.count * 3)).map{$0 * 3}, arrayX.map({String($0).toInt()!}).reduce(0, combine: +)) ? "fizz" : ""
-    let buzz = contains(["0", "5"], arrayX.last!) ? "buzz" : ""
+    let characters = stringX.characters
+    let sum = characters.flatMap{Int(String($0))}.reduce(0, combine: +)
+    let fizz =  (0...(characters.count * 3)).map{$0 * 3}.contains(sum) ? "fizz" : ""
+    let buzz = ["0", "5"].contains(characters.last!) ? "buzz" : ""
     
     var str = fizz + buzz
     
@@ -81,10 +81,24 @@ func fizzc(x:Int) -> String{
     var sum = 0
     
 //    for i in strX.startIndex..<advance(strX.startIndex, distance(strX.startIndex, strX.endIndex)) {
+//    for i in indices(strX) {
     for i in strX.startIndex..<strX.endIndex {
-        //    for i in indices(strX) {
-        sum += String(strX[i]).toInt()!
+//        guard let value = Int(String(strX[i])) else{
+//            continue
+//        }
+//        
+//        sum += value
+        
+        sum += Int(String(strX[i]))!
     }
+    
+//    (strX.startIndex..<strX.endIndex).forEach{ i in
+//        guard let value = Int(String(strX[i])) else {
+//            return
+//        }
+//        
+//        sum += value
+//    }
     
 //    for character in String(x) {
 //        sum += String(character).toInt()!
@@ -102,7 +116,7 @@ func fizzc(x:Int) -> String{
 
 func buzzc(x:Int) -> String {
     let strX = String(x)
-    switch strX[advance(strX.endIndex, -1)] {
+    switch strX[strX.endIndex.advancedBy(-1)] {
 //    switch last(String(x))!{
     case "0", "5" :
         return "buzz"
@@ -121,10 +135,10 @@ func fizzbuzz2d(x:Int) -> String{
 }
 
 func fizzd(x:Int) -> String {
-    let sum = map(String(x), {String($0).toInt()!}).reduce(0, combine:+)
-    return contains([0, 3, 6, 9], sum) ? "fizz" : x < 10 ? "" : fizzd(sum)
+    let sum = String(x).characters.flatMap{Int(String($0))}.reduce(0, combine:+)
+    return [0, 3, 6, 9].contains(sum) ? "fizz" : x <= 11 ? "" : fizzd(sum)
 }
 
 func buzzd(x:Int) -> String{
-    return contains(["0", "5"], last(String(x))!) ? "buzz" : ""
+    return ["0", "5"].contains(String(x).characters.last!) ? "buzz" : ""
 }
