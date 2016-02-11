@@ -39,6 +39,7 @@ print("fizzbuzzArray == fizzbuzzArrayd \(fizzbuzzArray == fizzbuzzArrayd)")
 
 let optionalString:String? = "Optional string"
 let any:Any = optionalString
+let n:String? = nil
 
 //let string = any as! Optional<String>
 //
@@ -47,5 +48,9 @@ let any:Any = optionalString
 //}
 
 if let string = flatWrap(any) as? String {
+    print("\(string)")
+}
+
+if let string = flatWrap(n) as? String{
     print("\(string)")
 }
