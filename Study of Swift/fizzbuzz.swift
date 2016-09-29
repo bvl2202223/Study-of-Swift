@@ -8,7 +8,7 @@
 
 import Foundation
 
-func fizzbuzz(x:Int) -> String{
+func fizzbuzz(_ x:Int) -> String{
     
     var str = ""
     

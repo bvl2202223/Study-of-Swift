@@ -9,7 +9,7 @@
 import Foundation
 
 struct S {
-    private let x:Int
+    fileprivate let x:Int
     let y:Int
 }
 

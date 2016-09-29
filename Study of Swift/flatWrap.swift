@@ -8,7 +8,7 @@
 
 import Foundation
 
-func flatWrap(any:Any) -> Any? {
+func flatWrap(_ any:Any) -> Any? {
     let mirror:Mirror = Mirror(reflecting:any)
     let children = mirror.children
     

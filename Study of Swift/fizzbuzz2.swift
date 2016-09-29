@@ -8,7 +8,7 @@
 
 import Foundation
 
-func fizzbuzz2a(x:Int) -> String{
+func fizzbuzz2a(_ x:Int) -> String{
     let strX = String(x)
     
     let fizz:() -> String = {
@@ -50,10 +50,10 @@ func fizzbuzz2a(x:Int) -> String{
     return str
 }
 
-func fizzbuzz2b(x:Int) -> String{
+func fizzbuzz2b(_ x:Int) -> String{
     let stringX = String(x)
     let characters = stringX.characters
-    let sum = characters.flatMap{Int(String($0))}.reduce(0, combine: +)
+    let sum = characters.flatMap{Int(String($0))}.reduce(0, +)
     let fizz =  (0...(characters.count * 3)).map{$0 * 3}.contains(sum) ? "fizz" : ""
     let buzz = ["0", "5"].contains(characters.last!) ? "buzz" : ""
     
@@ -66,7 +66,7 @@ func fizzbuzz2b(x:Int) -> String{
     return str
 }
 
-func fizzbuzz2c(x:Int) -> String{
+func fizzbuzz2c(_ x:Int) -> String{
     var str = fizzc(x) + buzzc(x)
     
     if str == "" {
@@ -76,13 +76,13 @@ func fizzbuzz2c(x:Int) -> String{
     return str
 }
 
-func fizzc(x:Int) -> String{
+func fizzc(_ x:Int) -> String{
     let strX = String(x)
     var sum = 0
     
 //    for i in strX.startIndex..<advance(strX.startIndex, distance(strX.startIndex, strX.endIndex)) {
 //    for i in indices(strX) {
-    for i in strX.startIndex..<strX.endIndex {
+    for i in strX.characters.indices {
 //        guard let value = Int(String(strX[i])) else{
 //            continue
 //        }
@@ -114,9 +114,9 @@ func fizzc(x:Int) -> String{
     }
 }
 
-func buzzc(x:Int) -> String {
+func buzzc(_ x:Int) -> String {
     let strX = String(x)
-    switch strX[strX.endIndex.advancedBy(-1)] {
+    switch strX[strX.characters.index(strX.endIndex, offsetBy: -1)] {
 //    switch last(String(x))!{
     case "0", "5" :
         return "buzz"
@@ -125,7 +125,7 @@ func buzzc(x:Int) -> String {
     }
 }
 
-func fizzbuzz2d(x:Int) -> String{
+func fizzbuzz2d(_ x:Int) -> String{
     switch fizzd(x) + buzzd(x){
     case "" :
         return String(x)
@@ -134,11 +134,11 @@ func fizzbuzz2d(x:Int) -> String{
     }
 }
 
-func fizzd(x:Int) -> String {
-    let sum = String(x).characters.flatMap{Int(String($0))}.reduce(0, combine:+)
+func fizzd(_ x:Int) -> String {
+    let sum = String(x).characters.flatMap{Int(String($0))}.reduce(0, +)
     return [0, 3, 6, 9].contains(sum) ? "fizz" : x <= 11 ? "" : fizzd(sum)
 }
 
-func buzzd(x:Int) -> String{
+func buzzd(_ x:Int) -> String{
     return ["0", "5"].contains(String(x).characters.last!) ? "buzz" : ""
 }

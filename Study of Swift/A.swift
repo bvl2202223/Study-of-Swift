@@ -10,13 +10,13 @@ import Foundation
 
 class A{
     var string:String
-    private var privateString:String
+    fileprivate var privateString:String
     init (string:String){
         self.string = string;
         self.privateString = string
     }
 
-    func overloadTest(a:A) -> String{
+    func overloadTest(_ a:A) -> String{
         return "A"
     }
 }
